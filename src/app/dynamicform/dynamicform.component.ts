@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { QuestionBase } from '../questionbase';
 
 @Component({
@@ -14,8 +14,8 @@ export class DynamicformComponent implements OnInit {
 
   ngOnInit() {
     this.dynamicform = new FormGroup({
-      fname: new FormControl(),
-      email: new FormControl()
+      fname: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email])
     });
   }
   onSubmit(): void{
