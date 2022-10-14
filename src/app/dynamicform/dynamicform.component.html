@@ -1,16 +1,17 @@
 <h1> Job application for Heroes</h1>
 <form [formGroup]="dynamicform" (ngSubmit)="onSubmit()">
-  <div [ngClass]="{'has-error': dynamicform.get('fname')?.errors && (dynamicform.get('fname')?.touched||dynamicform.get('fname')?.dirty) }">
+  <div class="required1"[ngClass]="{'has-error': dynamicform.get('fname')?.errors && (dynamicform.get('fname')?.touched||dynamicform.get('fname')?.dirty) }">
   <label for="fname">First name: </label>
-  <input type="text" formcontrlName="fname" id="fname" name="fname" formControlName="fname"><br><br>
+  <input type="text" formcontrlName="fname" id="fname" name="fname" formControlName="fname"><br>
   <span class="help block " *ngIf="dynamicform.get('fname')?.errors && (dynamicform.get('fname')?.touched||dynamicform.get('fname')?.dirty)">
 <span class="required" *ngIf="dynamicform.get('fname')?.errors?.['required']">Required field
 </span>
   </span>
   </div>
+  <div class="email">
   <label for="email">Email: </label>
   <input type="text" formcontrolName="email" id="lname" name="lname" formControlName="email"><br><br>
-  <!-- <div >field required</div> -->
+  </div>
   <label for="cars">Bravery Rating:</label>
   <select name="cars" id="cars">
     <option value="volvo">Solid</option>
