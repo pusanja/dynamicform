@@ -15,7 +15,7 @@ export class DynamicformComponent implements OnInit {
   ngOnInit() {
     this.dynamicform = new FormGroup({
       fname: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email])
+      email: new FormControl('',)
     });
   }
   onSubmit(): void{

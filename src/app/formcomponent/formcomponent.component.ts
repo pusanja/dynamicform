@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formcomponent.component.css']
 })
 export class FormcomponentComponent implements OnInit {
+  dropdowndata=[]
 
   constructor() { }
 
