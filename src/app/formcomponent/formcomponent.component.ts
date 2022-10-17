@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+
+import { QuestionBase } from '../questionbase';
 
 @Component({
-  selector: 'app-formcomponent',
-  templateUrl: './formcomponent.component.html',
-  styleUrls: ['./formcomponent.component.css']
+  selector: 'app-question',
+  templateUrl: './formcomponent.component.html'
 })
-export class FormcomponentComponent implements OnInit {
-  dropdowndata=[]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class FormcomponentComponent{
+  @Input() question!: QuestionBase<string>;
+  @Input() form!: FormGroup;
+  get isValid() { return this.form.controls[this.question.key].valid; }
 }

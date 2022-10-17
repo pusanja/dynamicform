@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DynamicformComponent } from './dynamicform/dynamicform.component';
-import { FormcomponentComponent } from './formcomponent/formcomponent.component';
+import { DynamicFormComponent } from './dynamicform/dynamicform.component';
 
 const routes: Routes = [
-{ path: 'create',component:DynamicformComponent},
-
-
+{ path: 'create',component:DynamicFormComponent},
+{path: '',redirectTo:'/create', pathMatch: 'full'}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

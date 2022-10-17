@@ -1,26 +1,17 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormcomponentComponent } from './formcomponent/formcomponent.component';
-import { DynamicformComponent } from './dynamicform/dynamicform.component';
+import { DynamicFormComponent } from './dynamicform/dynamicform.component';
+import { FormcomponentComponent  } from './formcomponent/formcomponent.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormcomponentComponent,
-    DynamicformComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [ BrowserModule, ReactiveFormsModule ],
+  declarations: [ AppComponent, DynamicFormComponent, FormcomponentComponent],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
-  constructor(){}
- }
+  constructor() {
+  }
+}
