@@ -5,7 +5,8 @@ import { QuestionBase } from '../questionbase';
 
 @Component({
   selector: 'app-question',
-  templateUrl: './formcomponent.component.html'
+  templateUrl: './formcomponent.component.html',
+
 })
 export class FormcomponentComponent{
   @Input() question!: QuestionBase<string>;

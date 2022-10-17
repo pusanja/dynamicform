@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   template: `
-    <div >
+    <div class="form">
       <h2>Job Application for Heroes</h2>
       <app-dynamic-form [questions]="questions$ | async"></app-dynamic-form>
     </div>
   `,
+
   providers:  [QuestionService]
 })
 export class AppComponent {

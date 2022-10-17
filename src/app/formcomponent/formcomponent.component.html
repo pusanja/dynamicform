@@ -1,4 +1,4 @@
-<div [formGroup]="form" style="background-color:red ;">
+<div [formGroup]="form">
   <label [attr.for]="question.key">{{question.label}}</label>
 
   <div [ngSwitch]="question.controlType" >
@@ -12,5 +12,5 @@
 
   </div>
 
-  <div class=*ngIf="!isValid">{{question.label}} is required</div>
+  <div class="" *ngIf="!isValid">{{question.label}} is required</div>
 </div>
